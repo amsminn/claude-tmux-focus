@@ -7,6 +7,11 @@ set -euo pipefail
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 source "$SCRIPT_DIR/config.sh"
 
+# Ensure common binary paths are available (hooks may run with minimal PATH)
+for p in /opt/homebrew/bin /usr/local/bin; do
+    [[ -d "$p" ]] && [[ ":$PATH:" != *":$p:"* ]] && PATH="$p:$PATH"
+done
+
 # Check if macOS terminal-notifier is available.
 has_terminal_notifier() {
     command -v terminal-notifier &>/dev/null
