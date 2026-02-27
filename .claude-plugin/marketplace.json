@@ -1,0 +1,15 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "amsminn-claude-tmux-focus",
+  "description": "Auto-focus tmux pane when Claude Code needs your attention",
+  "owner": {
+    "name": "amsminn"
+  },
+  "plugins": [
+    {
+      "name": "claude-tmux-focus",
+      "description": "Auto-focus tmux pane when Claude Code needs your attention",
+      "source": "./plugin"
+    }
+  ]
+}
