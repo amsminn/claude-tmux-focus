@@ -1,0 +1,10 @@
+{
+  "name": "claude-tmux-focus",
+  "version": "1.0.0",
+  "description": "Auto-focus tmux pane when Claude Code needs your attention",
+  "author": {
+    "name": "amsminn"
+  },
+  "license": "MIT",
+  "keywords": ["tmux", "notification", "focus", "pane"]
+}

@@ -1,0 +1,8 @@
+{
+  "enableNotification": true,
+  "enableMacOSNotifier": true,
+  "enableLinuxNotifier": true,
+  "highlightColor": "blue",
+  "tmuxMessageDuration": 3000,
+  "logLevel": "info"
+}
