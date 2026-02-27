@@ -75,6 +75,11 @@ _state_file() {
     printf '%s/highlight-state-%s' "$LOG_DIR" "${TMUX_PANE//[^a-zA-Z0-9_]/_}"
 }
 
+# Check if pane is currently highlighted (state file exists).
+is_highlighted() {
+    [[ -f "$(_state_file)" ]]
+}
+
 # Apply highlight to the pane. Persists until clear_highlight is called.
 highlight_pane() {
     local pane="${TMUX_PANE}"
